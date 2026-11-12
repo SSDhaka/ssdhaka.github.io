@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dr. Surjeet Singh Dhaka | Agribusiness Expert</title>
+<meta name="description" content="Articles, opinions and consultancy services in agribusiness by Dr. Surjeet Singh Dhaka, Central University of Punjab.">
+<meta name="theme-color" content="#07352b">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d2a22;--deep:#07352b;--green:#1f9d55;--lime:#c6ee5c;--gold:#f2b01e;--orange:#f47c20;--crimson:#d62f4b;--teal:#13a3a8;--violet:#7b4bd6;--sky:#2f7fe0;
+  --bg:#fffaf0;--muted:#587068;--line:#f0e6cf;--card:#fff;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  --nav:68px;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:#e9e2d0;color:var(--ink);line-height:1.55;min-height:100vh}
+a{color:var(--teal);text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.app{max-width:520px;margin:0 auto;min-height:100vh;background:var(--bg);position:relative;padding-bottom:calc(var(--nav) + env(safe-area-inset-bottom) + 12px);box-shadow:0 0 40px rgba(0,0,0,.12)}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:10px;padding:calc(10px + env(safe-area-inset-top)) 16px 10px;background:rgba(7,53,43,.96);backdrop-filter:blur(8px);color:#fff;border-bottom:3px solid var(--gold)}
+.top img{width:34px;height:34px;border-radius:10px}
+.top b{font-family:var(--serif);font-weight:800;font-size:17px;flex:1}
+.top button{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.12)}
+.view{display:none;animation:in .3s ease}
+.view.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.pad{padding:18px 16px}
+
+/* hero */
+.hero{color:#fff;padding:26px 18px 54px;position:relative;overflow:hidden;background:
+  radial-gradient(420px 260px at 90% 10%,rgba(242,176,30,.55),transparent 60%),
+  radial-gradient(360px 260px at 0% 100%,rgba(244,124,32,.45),transparent 60%),
+  radial-gradient(300px 220px at 55% 0%,rgba(19,163,168,.5),transparent 60%),
+  linear-gradient(135deg,#06382d,#0b6b49 55%,#12906a)}
+.ph{display:flex;gap:16px;align-items:center}
+.ph .pic{flex:none;width:96px;height:112px;border-radius:16px;border:3px solid transparent;background:linear-gradient(#fff,#fff) padding-box,conic-gradient(#f2b01e,#f47c20,#d62f4b,#13a3a8,#c6ee5c,#f2b01e) border-box;overflow:hidden;box-shadow:0 10px 24px rgba(0,0,0,.3)}
+.ph .pic img{width:100%;height:100%;object-fit:cover}
+.eyebrow{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#3a2600;background:var(--gold);padding:3px 10px;border-radius:99px}
+.hero h1{font-family:var(--serif);font-weight:800;font-size:26px;line-height:1.1;margin:8px 0 4px}
+.hero p.t{font-size:13.5px;color:#d9f1e4}
+.hero .lead{margin-top:16px;font-size:15px;color:#eafff3}
+.cta-row{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:99px;font-weight:700;font-size:14.5px;border:2px solid transparent;transition:transform .15s}
+.btn:active{transform:scale(.97)}
+.btn.p{background:linear-gradient(90deg,var(--gold),var(--orange));color:#2d1700;box-shadow:0 8px 18px rgba(244,124,32,.4)}
+.btn.o{border-color:rgba(255,255,255,.7);color:#fff}
+.btn.wa{background:#25d366;color:#053a1c}
+.btn.up{background:var(--deep);color:#fff}
+.btn.ghost{border-color:var(--line);color:var(--deep);background:#fff}
+.btn.sm{padding:9px 14px;font-size:13px}
+.btn.full{width:100%}
+
+.stats{margin:-34px 16px 0;position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.stat{border-radius:14px;padding:12px 4px;text-align:center;color:#fff;box-shadow:0 8px 18px rgba(7,53,43,.2)}
+.stat b{display:block;font-family:var(--serif);font-size:22px;line-height:1.1}
+.stat span{font-size:10.5px;font-weight:600}
+.stat:nth-child(1){background:linear-gradient(135deg,#1f9d55,#0d7a45)}
+.stat:nth-child(2){background:linear-gradient(135deg,#f2b01e,#e08a0b)}
+.stat:nth-child(3){background:linear-gradient(135deg,#13a3a8,#0b7c91)}
+.stat:nth-child(4){background:linear-gradient(135deg,#d62f4b,#a81f3a)}
+
+.sec{padding:22px 16px 0}
+.sh{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.sh i{width:8px;height:26px;border-radius:6px;background:linear-gradient(var(--gold),var(--orange),var(--crimson))}
+.sh h2{font-family:var(--serif);font-weight:800;font-size:21px;color:var(--deep);flex:1}
+.sh a,.sh button{font-size:13px;font-weight:700;color:var(--teal)}
+
+.install{margin:16px 16px 0;padding:14px;border-radius:16px;background:linear-gradient(120deg,#0b6b49,#13a3a8);color:#fff;display:none;align-items:center;gap:12px}
+.install.show{display:flex}
+.install div{flex:1;font-size:13.5px}
+.install b{display:block;font-size:15px}
+
+/* cards */
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:0 6px 16px rgba(120,90,20,.08)}
+.hscroll{display:flex;gap:12px;overflow-x:auto;padding:2px 16px 8px;margin:0 -16px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.hscroll::-webkit-scrollbar{display:none}
+.hscroll>*{flex:none;scroll-snap-align:start}
+.svc-mini{width:210px;border-top:5px solid var(--c)}
+.svc-mini h3{font-size:15px;font-family:var(--serif);color:var(--deep);margin:8px 0 4px;line-height:1.25}
+.price{font-family:var(--serif);font-weight:800;font-size:22px;color:var(--deep)}
+.price small{font-family:var(--sans);font-size:12px;font-weight:600;color:var(--muted);margin-left:4px}
+.ico{width:42px;height:42px;border-radius:13px;background:var(--c);display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 6px 12px rgba(0,0,0,.15)}
+
+/* blog */
+.chips{display:flex;gap:8px;overflow-x:auto;padding:2px 16px 4px;margin:0 -16px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;padding:8px 15px;border-radius:99px;font-size:13.5px;font-weight:700;background:#fff;border:1px solid var(--line);color:var(--muted)}
+.chip.on{background:var(--deep);color:#fff;border-color:var(--deep)}
+.search{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:14px;font:inherit;background:#fff;margin:12px 0}
+.post{display:block;margin-bottom:12px;border-left:6px solid var(--c);color:inherit}
+.tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:99px;color:#fff;background:var(--c)}
+.draft{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:99px;background:#fff1b8;color:#6a4a00;margin-left:6px}
+.post h3{font-family:var(--serif);font-size:18px;line-height:1.25;color:var(--deep);margin:8px 0 6px}
+.post p{font-size:14px;color:var(--muted)}
+.meta{font-size:12px;color:var(--muted);margin-top:8px}
+.article h1{font-family:var(--serif);font-weight:800;font-size:27px;line-height:1.15;color:var(--deep);margin:12px 0 8px}
+.article .body p{font-size:16.5px;margin-top:14px;line-height:1.7}
+.back{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:14px;color:var(--teal);margin-bottom:4px}
+.author{display:flex;align-items:center;gap:12px;margin:14px 0;padding:12px;background:#fff;border:1px solid var(--line);border-radius:14px}
+.author img{width:46px;height:46px;border-radius:50%;object-fit:cover;object-position:center 20%}
+.author b{display:block;font-size:14px}.author span{font-size:12.5px;color:var(--muted)}
+.cta-card{margin-top:22px;padding:18px;border-radius:18px;color:#fff;background:linear-gradient(120deg,#0b6b49,#13a3a8 70%,#2f7fe0)}
+.cta-card h3{font-family:var(--serif);font-size:19px}
+.cta-card p{font-size:14px;margin:6px 0 12px;color:#eafff3}
+.empty{text-align:center;color:var(--muted);padding:30px 10px}
+
+/* services */
+.svc{margin-bottom:14px;border-top:5px solid var(--c)}
+.svc .row{display:flex;gap:12px;align-items:center}
+.svc h3{font-family:var(--serif);font-size:18px;line-height:1.2;color:var(--deep)}
+.svc p.d{font-size:14px;color:var(--muted);margin:10px 0 8px}
+.svc ul{list-style:none;font-size:14px;margin-bottom:12px}
+.svc li{padding:3px 0 3px 22px;position:relative}
+.svc li::before{content:"";position:absolute;left:2px;top:9px;width:11px;height:11px;border-radius:50%;background:var(--c)}
+.svc li::after{content:"";position:absolute;left:6px;top:11px;width:3px;height:6px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+.btns .btn{flex:1;min-width:130px}
+.sample{font-size:11.5px;color:#7a5410;background:#fff1b8;border-radius:8px;padding:6px 10px;margin-bottom:12px}
+.note{font-size:12.5px;color:var(--muted);margin-top:4px}
+
+/* profile */
+.acc{border:1px solid var(--line);border-radius:14px;background:#fff;margin-bottom:10px;overflow:hidden}
+.acc summary{padding:14px 16px;font-weight:700;color:var(--deep);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::after{content:"+";font-size:20px;color:var(--orange)}
+.acc[open] summary::after{content:"\2212"}
+.acc .in{padding:0 16px 14px}
+.li{padding:9px 0;border-top:1px dashed var(--line);font-size:14.5px}
+.li small{display:block;color:var(--muted);font-size:12.5px}
+.li b{font-weight:600}
+.cit{float:right;margin-left:8px;font-size:11.5px;font-weight:700;background:var(--gold);color:#3a2600;padding:2px 9px;border-radius:99px}
+.links{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px}
+
+/* contact */
+.ct{display:flex;gap:14px;align-items:center;margin-bottom:10px;color:inherit;border-left:6px solid var(--c)}
+.ct .ico{flex:none}
+.ct b{display:block;font-size:15px;color:var(--deep)}.ct span{font-size:13px;color:var(--muted);word-break:break-word}
+
+/* bottom nav */
+.nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:520px;z-index:30;display:grid;grid-template-columns:repeat(5,1fr);background:#fff;border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom));box-shadow:0 -6px 20px rgba(0,0,0,.08)}
+.nav button{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;font-size:11px;font-weight:700;color:#8a9a92;border-radius:12px}
+.nav button svg{width:22px;height:22px}
+.nav button.on{color:var(--orange)}
+.nav button.on svg{stroke:var(--orange)}
+.toast{position:fixed;left:50%;bottom:calc(var(--nav) + 24px);transform:translateX(-50%) translateY(20px);background:var(--deep);color:#fff;padding:10px 18px;border-radius:99px;font-size:13.5px;opacity:0;pointer-events:none;transition:.3s;z-index:50}
+.toast.show{opacity:1;transform:translateX(-50%)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <div class="top">
+    <img src="icons/icon-192.png" alt="">
+    <b id="topTitle">Dr. S. S. Dhaka</b>
+    <button id="shareBtn" aria-label="Share app"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+  </div>
+  <main id="main"></main>
+</div>
+
+<nav class="nav" id="nav" aria-label="Main"></nav>
+<div class="toast" id="toast"></div>
+
+<script src="content.js"></script>
+<script src="photo.js"></script>
+<script>
+(function(){
+"use strict";
+var S=SETTINGS;
+function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function money(n){return n? "₹"+Number(n).toLocaleString("en-IN") : "Custom quote"}
+function fdate(d){try{return new Date(d+"T00:00:00").toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric"})}catch(e){return d}}
+var TYPE_COLOR={Article:"#1f9d55",Opinion:"#f47c20",Viewpoint:"#7b4bd6"};
+var IC={
+ home:'<path d="M3 11l9-8 9 8M5 10v10h14V10M10 20v-6h4v6"/>',
+ blog:'<path d="M4 4h12l4 4v12H4zM15 4v5h5M8 13h8M8 17h6"/>',
+ work:'<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/>',
+ user:'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/>',
+ mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
+ phone:'<path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/>',
+ doc:'<path d="M6 3h9l4 4v14H6zM14 3v5h5M9 13h7M9 17h5"/>',
+ chart:'<path d="M3 17l6-6 4 4 8-8M15 7h6v6"/>',
+ cap:'<path d="M2 9l10-5 10 5-10 5zM6 11v5c3 2.500 9 2.500 12 0v-5"/>',
+ team:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.500"/><path d="M3 20c0-3.500 3-5.500 6-5.500s6 2 6 5.500M15 15c3 0 6 1.500 6 5"/>',
+ mic:'<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/>',
+ pin:'<path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.500"/>',
+ globe:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>',
+ arrow:'<path d="M5 12h14M13 6l6 6-6 6"/>'
+};
+function svg(n,sz,col){return '<svg width="'+(sz||22)+'" height="'+(sz||22)+'" viewBox="0 0 24 24" fill="none" stroke="'+(col||"currentColor")+'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+IC[n]+'</svg>'}
+function wa(msg){return "https://wa.me/"+S.whatsapp+"?text="+encodeURIComponent(msg)}
+function upi(svc){return "upi://pay?pa="+encodeURIComponent(S.upi)+"&pn="+encodeURIComponent(S.upiName)+"&am="+svc.price+"&cu=INR&tn="+encodeURIComponent("Consultancy: "+svc.title)}
+function toast(t){var e=document.getElementById("toast");e.textContent=t;e.classList.add("show");clearTimeout(toast._t);toast._t=setTimeout(function(){e.classList.remove("show")},2200)}
+
+/* ---------- views ---------- */
+function postCard(p){
+  var c=TYPE_COLOR[p.type]||"#1f9d55";
+  return '<a class="card post" style="--c:'+c+'" href="#/post/'+esc(p.id)+'"><span class="tag" style="--c:'+c+'">'+esc(p.type)+'</span>'+(p.draft?'<span class="draft">Sample draft</span>':'')+
+   '<h3>'+esc(p.title)+'</h3><p>'+esc(p.summary)+'</p><div class="meta">'+fdate(p.date)+' &middot; '+p.read+' min read</div></a>';
+}
+function svcMini(s){
+  return '<a class="card svc-mini" style="--c:'+s.color+'" href="#/services"><div class="ico" style="--c:'+s.color+'">'+svg(s.icon)+'</div><h3>'+esc(s.title)+'</h3><div class="price">'+(s.price?money(s.price):'Custom')+'<small>'+esc(s.unit)+'</small></div></a>';
+}
+function viewHome(){
+  var posts=POSTS.slice(0,3).map(postCard).join("");
+  var svcs=SERVICES.map(svcMini).join("");
+  return '<div class="hero"><div class="ph"><div class="pic"><img src="'+PHOTO+'" alt="'+esc(S.name)+'"></div><div><span class="eyebrow">Agribusiness</span><h1>'+esc(S.name)+'</h1><p class="t">'+esc(PROFILE.role)+'</p></div></div>'+
+   '<p class="lead">I turn data into decisions for farmers, firms and policymakers. Read my views, or book expert help for your agribusiness.</p>'+
+   '<div class="cta-row"><a class="btn p" href="#/services">Book consultancy</a><a class="btn o" href="#/blog">Read my blog</a></div></div>'+
+   '<div class="stats">'+PROFILE.stats.map(function(x){return '<div class="stat"><b>'+x[0]+'</b><span>'+x[1]+'</span></div>'}).join("")+'</div>'+
+   '<div class="install" id="install"><div><b>Install this app</b>Add it to your home screen. Free and works offline.</div><button class="btn p sm" id="installBtn">Install</button></div>'+
+   '<div class="sec"><div class="sh"><i></i><h2>Consultancy services</h2><a href="#/services">See all</a></div><div class="hscroll">'+svcs+'</div></div>'+
+   '<div class="sec"><div class="sh"><i></i><h2>Latest from my blog</h2><a href="#/blog">See all</a></div>'+posts+'</div>'+
+   '<div class="sec"><div class="cta-card"><h3>Have a question or a project?</h3><p>Message me directly. I reply personally on WhatsApp.</p><a class="btn wa full" target="_blank" rel="noopener" href="'+wa("Hello Dr. Dhaka, I found you through your app and would like to talk.")+'">Chat on WhatsApp</a></div></div>';
+}
+var blogFilter="All",blogQ="";
+function blogList(){
+  var q=blogQ.toLowerCase();
+  var list=POSTS.filter(function(p){return (blogFilter==="All"||p.type===blogFilter)&&(!q||(p.title+" "+p.summary+" "+p.body).toLowerCase().indexOf(q)>=0)});
+  return list.length?list.map(postCard).join(""):'<div class="empty">No posts found.</div>';
+}
+function viewBlog(){
+  var tabs=["All","Article","Opinion","Viewpoint"].map(function(t){return '<button class="chip'+(t===blogFilter?' on':'')+'" data-f="'+t+'">'+(t==="All"?"All":t+"s")+'</button>'}).join("");
+  return '<div class="pad"><div class="sh"><i></i><h2>Blog</h2></div><p class="note" style="margin:-4px 0 10px">Articles, opinions and points of view on agribusiness.</p><div class="chips" id="chips">'+tabs+'</div><input class="search" id="q" type="search" placeholder="Search posts..." value="'+esc(blogQ)+'"><div id="plist">'+blogList()+'</div></div>';
+}
+function viewPost(id){
+  var p=POSTS.filter(function(x){return x.id===id})[0];
+  if(!p) return '<div class="pad"><a class="back" href="#/blog">&larr; Back</a><div class="empty">Post not found.</div></div>';
+  var c=TYPE_COLOR[p.type]||"#1f9d55";
+  var body=String(p.body).split(/\n\s*\n/).map(function(x){return '<p>'+esc(x).replace(/\n/g,"<br>")+'</p>'}).join("");
+  return '<div class="pad article"><a class="back" href="#/blog">&larr; All posts</a><div><span class="tag" style="--c:'+c+'">'+esc(p.type)+'</span>'+(p.draft?'<span class="draft">Sample draft</span>':'')+'</div>'+
+   '<h1>'+esc(p.title)+'</h1><div class="meta">'+fdate(p.date)+' &middot; '+p.read+' min read</div>'+
+   '<div class="author"><img src="'+PHOTO+'" alt=""><div><b>'+esc(S.name)+'</b><span>'+esc(PROFILE.org)+'</span></div></div>'+
+   '<div class="body">'+body+'</div>'+
+   '<div class="btns" style="margin-top:20px"><button class="btn ghost" id="sharePost">Share this post</button></div>'+
+   '<div class="cta-card"><h3>Need advice on this topic?</h3><p>Book a one-to-one call and get practical guidance for your own situation.</p><a class="btn p full" href="#/services">See consultancy services</a></div></div>';
+}
+function viewServices(){
+  var cards=SERVICES.map(function(s){
+    var pay=(S.upi&&s.price)?'<a class="btn up" href="'+esc(upi(s))+'">Pay '+money(s.price)+' by UPI</a>':'';
+    var msg="Hello Dr. Dhaka, I would like to book: "+s.title+(s.price?" ("+money(s.price)+" "+s.unit+")":" (custom quote)")+". My name is ";
+    return '<div class="card svc" style="--c:'+s.color+'"><div class="row"><div class="ico" style="--c:'+s.color+'">'+svg(s.icon)+'</div><div><h3>'+esc(s.title)+'</h3><div class="price">'+(s.price?money(s.price):'Custom quote')+'<small>'+esc(s.unit)+'</small></div></div></div>'+
+     '<p class="d">'+esc(s.desc)+'</p><ul>'+s.points.map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul>'+
+     '<div class="btns"><a class="btn wa" target="_blank" rel="noopener" href="'+wa(msg)+'">'+(s.price?'Book on WhatsApp':'Request a quote')+'</a>'+pay+'</div></div>';
+  }).join("");
+  return '<div class="pad"><div class="sh"><i></i><h2>Consultancy services</h2></div><p class="note" style="margin:-4px 0 14px">Expert help for farmers, FPOs, startups, students and institutions. Choose a service, message me, and we will fix a time.</p>'+
+   '<div class="sample">Prices shown are starting rates. Final scope and price are confirmed with you before you pay.</div>'+cards+
+   '<div class="card" style="text-align:center"><b style="font-family:var(--serif);font-size:17px;color:var(--deep)">Not sure what you need?</b><p class="note" style="margin:6px 0 12px">Tell me your problem and I will suggest the right option.</p><a class="btn wa full" target="_blank" rel="noopener" href="'+wa("Hello Dr. Dhaka, I need advice about ")+'">Ask on WhatsApp</a></div></div>';
+}
+function li(a,b){return '<div class="li"><b>'+esc(a)+'</b><small>'+esc(b)+'</small></div>'}
+function viewProfile(){
+  var P=PROFILE;
+  return '<div class="pad"><div class="card" style="text-align:center"><img src="'+PHOTO+'" alt="" style="width:104px;height:104px;border-radius:50%;object-fit:cover;object-position:center 20%;border:4px solid var(--gold)"><h2 style="font-family:var(--serif);font-size:22px;margin-top:10px;color:var(--deep)">'+esc(S.name)+'</h2><p class="note">'+esc(P.role)+'<br>'+esc(P.org)+'</p></div>'+
+   '<div class="sec" style="padding:16px 0 0"><div class="card"><p style="font-size:15.5px">'+esc(P.about)+'</p></div></div>'+
+   '<div class="sec" style="padding:16px 0 0">'+
+   '<details class="acc" open><summary>Research interests</summary><div class="in">'+P.interests.map(function(x){return '<div class="li">'+esc(x)+'</div>'}).join("")+'</div></details>'+
+   '<details class="acc"><summary>Research projects &amp; patent</summary><div class="in">'+P.projects.map(function(x){return li(x[0],x[1])}).join("")+li("Patent",P.patent)+'</div></details>'+
+   '<details class="acc"><summary>Selected publications</summary><div class="in">'+P.papers.map(function(x){return '<div class="li"><span class="cit">'+x[2]+' cited</span><b>'+esc(x[0])+'</b><small>'+esc(x[1])+'</small></div>'}).join("")+'<div class="links"><a class="btn ghost sm" target="_blank" rel="noopener" href="'+S.scholar+'">Google Scholar</a><a class="btn ghost sm" target="_blank" rel="noopener" href="'+S.vidwan+'">Vidwan</a></div></div></details>'+
+   '<details class="acc"><summary>Experience</summary><div class="in">'+P.experience.map(function(x){return li(x[0],x[1])}).join("")+'</div></details>'+
+   '<details class="acc"><summary>Education</summary><div class="in">'+P.education.map(function(x){return li(x[0],x[1])}).join("")+'</div></details>'+
+   '<details class="acc"><summary>Committees at CU Punjab</summary><div class="in">'+P.committees.map(function(x){return li(x[0],x[1])}).join("")+'</div></details>'+
+   '</div><div class="links"><a class="btn ghost sm" target="_blank" rel="noopener" href="'+S.website+'">My website</a><a class="btn ghost sm" target="_blank" rel="noopener" href="'+S.cup+'">University page</a></div></div>';
+}
+function viewContact(){
+  function row(c,ic,t,sub,href,ext){return '<a class="card ct" style="--c:'+c+'" href="'+esc(href)+'"'+(ext?' target="_blank" rel="noopener"':'')+'><div class="ico" style="--c:'+c+'">'+svg(ic)+'</div><div><b>'+t+'</b><span>'+esc(sub)+'</span></div></a>'}
+  return '<div class="pad"><div class="sh"><i></i><h2>Contact</h2></div><p class="note" style="margin:-4px 0 14px">The fastest way to reach me is WhatsApp.</p>'+
+   row("#25d366","phone","WhatsApp","Chat with me directly",wa("Hello Dr. Dhaka, "),true)+
+   row("#1f9d55","phone","Call",S.phone,"tel:"+S.phone.replace(/\s/g,""))+
+   row("#f47c20","mail","Email",S.email,"mailto:"+S.email)+
+   row("#13a3a8","mail","University email",S.email2,"mailto:"+S.email2)+
+   row("#7b4bd6","pin","Office",S.address,"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent("Central University of Punjab, Ghudda, Bathinda"),true)+
+   row("#2f7fe0","globe","Website","ssdhaka.github.io/SSDhaka",S.website,true)+
+   '<div class="card" style="text-align:center;margin-top:6px"><p class="note">&copy; <span id="yr"></span> '+esc(S.name)+' &middot; <a href="privacy.html">Privacy policy</a></p></div></div>';
+}
+
+/* ---------- router ---------- */
+var main=document.getElementById("main"),navEl=document.getElementById("nav");
+var TABS=[["home","Home","home"],["blog","Blog","blog"],["services","Services","work"],["profile","Profile","user"],["contact","Contact","mail"]];
+navEl.innerHTML=TABS.map(function(t){return '<button data-r="'+t[0]+'" aria-label="'+t[1]+'">'+svg(t[2])+t[1]+'</button>'}).join("");
+navEl.addEventListener("click",function(e){var b=e.target.closest("button");if(b)location.hash="#/"+b.getAttribute("data-r")});
+function route(){
+  var h=(location.hash||"#/home").replace(/^#\/?/,"");
+  var parts=h.split("/"),r=parts[0]||"home",html;
+  if(r==="post")html=viewPost(parts[1]);
+  else if(r==="blog")html=viewBlog();
+  else if(r==="services")html=viewServices();
+  else if(r==="profile")html=viewProfile();
+  else if(r==="contact")html=viewContact();
+  else {r="home";html=viewHome()}
+  main.innerHTML='<div class="view on">'+html+'</div>';
+  window.scrollTo(0,0);
+  var active=r==="post"?"blog":r;
+  Array.prototype.forEach.call(navEl.children,function(b){b.classList.toggle("on",b.getAttribute("data-r")===active)});
+  var yr=document.getElementById("yr");if(yr)yr.textContent=new Date().getFullYear();
+  var chips=document.getElementById("chips");
+  if(chips){chips.addEventListener("click",function(e){var b=e.target.closest(".chip");if(!b)return;blogFilter=b.getAttribute("data-f");Array.prototype.forEach.call(chips.children,function(x){x.classList.toggle("on",x===b)});document.getElementById("plist").innerHTML=blogList()});
+    document.getElementById("q").addEventListener("input",function(e){blogQ=e.target.value;document.getElementById("plist").innerHTML=blogList()})}
+  var sp=document.getElementById("sharePost");
+  if(sp)sp.addEventListener("click",function(){var p=POSTS.filter(function(x){return x.id===parts[1]})[0];share(p.title,S.website+"#/post/"+p.id)});
+  syncInstall();
+}
+window.addEventListener("hashchange",route);
+
+/* ---------- share + install ---------- */
+function share(title,url){
+  if(navigator.share){navigator.share({title:title,text:title,url:url}).catch(function(){})}
+  else if(navigator.clipboard){navigator.clipboard.writeText(url).then(function(){toast("Link copied")},function(){toast(url)})}
+  else toast(url);
+}
+document.getElementById("shareBtn").addEventListener("click",function(){share(S.name+" | Agribusiness",S.website)});
+var deferred=null;
+window.addEventListener("beforeinstallprompt",function(e){e.preventDefault();deferred=e;syncInstall()});
+window.addEventListener("appinstalled",function(){deferred=null;syncInstall();toast("App installed")});
+function syncInstall(){
+  var box=document.getElementById("install");if(!box)return;
+  var standalone=window.matchMedia("(display-mode: standalone)").matches||navigator.standalone;
+  var ios=/iphone|ipad|ipod/i.test(navigator.userAgent);
+  if(standalone){box.classList.remove("show");return}
+  if(deferred){box.classList.add("show");document.getElementById("installBtn").onclick=function(){deferred.prompt();deferred.userChoice.then(function(){deferred=null;syncInstall()})}}
+  else if(ios){box.classList.add("show");box.querySelector("div").innerHTML="<b>Install this app</b>Tap Share, then &ldquo;Add to Home Screen&rdquo;.";document.getElementById("installBtn").style.display="none"}
+}
+if("serviceWorker" in navigator&&location.protocol.indexOf("http")===0){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})})}
+route();
+})();
+</script>
+</body>
+</html>
